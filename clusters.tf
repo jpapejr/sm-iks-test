@@ -82,7 +82,7 @@ resource "ibm_sm_arbitrary_secret" "secrets_manager_arbitrary_secret_secret" {
   region          = var.region
   endpoint_type   = "private"
   description     = "example"
-  expiration_date = "1234"
+  expiration_date = "2006-01-02T15:04:05Z07:00"
   payload         = var.secrets_manager_example_secret_arbitrary_secret_data
   labels = [
     "my-label"

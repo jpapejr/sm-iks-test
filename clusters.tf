@@ -15,7 +15,7 @@ resource "ibm_iam_authorization_policy" "secrets_manager_secrets_manager_to_cont
 resource "ibm_container_ingress_instance" "cluster-sm-instance" {
   cluster = ibm_container_vpc_cluster.workload_vpc_workload_cluster_cluster.name
   instance_crn = ibm_resource_instance.secrets_manager_secrets_manager.crn
-  secret_group_id = ibm_sm_secret_group.secrets_manager_group_group.id
+  secret_group_id = ibm_sm_secret_group.secrets_manager_group_group.secret_group_id
   is_default = true
 }
 

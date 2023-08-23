@@ -96,7 +96,7 @@ resource "ibm_sm_username_password_secret" "secrets_manager_username_secret_secr
   region          = var.region
   endpoint_type   = "private"
   description     = "username-password"
-  expiration_date = "1234"
+  expiration_date = "2023-12-29T15:04:05Z07:00"
   username        = var.secrets_manager_example_secret_username
   password        = var.secrets_manager_example_secret_password
   labels = [

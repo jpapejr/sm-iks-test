@@ -83,7 +83,7 @@ resource "ibm_sm_arbitrary_secret" "secrets_manager_arbitrary_secret_secret" {
   region          = var.region
   endpoint_type   = "private"
   description     = "example"
-  expiration_date = ""2024-04-12T23:20:50Z""
+  expiration_date = "2024-04-12T23:20:50Z"
   payload         = var.secrets_manager_example_secret_arbitrary_secret_data
   labels = [
     "my-label"
@@ -97,7 +97,7 @@ resource "ibm_sm_username_password_secret" "secrets_manager_username_secret_secr
   region          = var.region
   endpoint_type   = "private"
   description     = "username-password"
-  expiration_date = ""2024-04-12T23:20:50Z""
+  expiration_date = "2024-04-12T23:20:50Z"
   username        = var.secrets_manager_example_secret_username
   password        = var.secrets_manager_example_secret_password
   labels = [

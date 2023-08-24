@@ -113,7 +113,7 @@ resource "ibm_sm_username_password_secret" "secrets_manager_username_secret_secr
 resource "ibm_container_ingress_secret_opaque" "workload_cluster_ingress_example" {
   cluster          = ibm_container_vpc_cluster.workload_vpc_workload_cluster_cluster.name
   secret_name      = "${var.prefix}-ingress-example"
-  secret_namespace = "ns"
+  secret_namespace = "default"
   persistence      = true
   fields {
     crn = ibm_sm_arbitrary_secret.secrets_manager_arbitrary_secret_secret.crn
